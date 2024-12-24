@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  
+  
+  
+  <display-name>Banking_system_dynamic</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+    <filter-name>Filter_validation</filter-name>
+    <filter-class>bank_servlets.Filter_validation</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>Filter_validation</filter-name>
+    <url-pattern>/register</url-pattern>
+</filter-mapping>
+
+ <filter>
+    <filter-name>Filter_admin</filter-name>
+    <filter-class>bank_servlets.Filter_admin</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>Filter_admin</filter-name>
+    <url-pattern>/admin</url-pattern>
+</filter-mapping>
+   
+  <filter>
+    <filter-name>Filter_login</filter-name>
+    <filter-class>bank_servlets.LoginFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>Filter_login</filter-name>
+    <url-pattern>/login</url-pattern>
+</filter-mapping>
+</web-app>
